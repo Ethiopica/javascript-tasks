@@ -1,11 +1,21 @@
-week_1
+## Completed tasks
 
-- [x] data_type
-- [x] string
-- [x] numbers
+week_01
 
-week_2
+- [x] Data_type
+- [x] Operator
+- [x] String
+- [x] Numbers
 
-- [x] condition
-- [x] numbers
-- [ ]
+week_02
+
+- [x] Basic-functions
+- [x] Numbers
+- [x] Strigs
+- [x] Conditions
+
+week_03
+
+- [x] gitHub
+- [] loops
+- [x] 8ball
