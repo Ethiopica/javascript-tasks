@@ -24,32 +24,36 @@ Display the result:
 Log the randomly selected answer to the console.
 Show the answer in analert(). */
 
-const magic8ball = randomNum(prompt("Enter Number"));
-
-randomNum(Math.random(8));
-switch (randomNum) {
-  case 1:
-    return "Yes definately";
-  case 2:
-    return " It is certain";
-  case 3:
-    return " Reply hazy, try agian";
-  case 4:
-    return "Ask agin later";
-  case 5:
-    return "Better not to tell you";
-  case 6:
-    return "My source say no";
-  case 7:
-    return " out look not so good";
-  case 8:
-    return "Sign point to say yes";
+function magic8ball() {
+  const question = prompt("Do you want to go home?");
+  console.log(question);
+  const randomNum = Math.floor(Math.random() * 8 + 1);
+  let answer;
+  switch (randomNum) {
+    case 1:
+      return "Yes definately";
+      break;
+    case 2:
+      return " It is certain";
+      break;
+    case 3:
+      return " Reply hazy, try agian";
+      break;
+    case 4:
+      return "Ask agin later";
+      break;
+    case 5:
+      return "Better not to tell you";
+      break;
+    case 6:
+      return "My source say no";
+      break;
+    case 7:
+      return " out look not so good";
+      break;
+    case 8:
+      return "Sign point to say yes";
+      break;
+  }
 }
-console.log(magic8ball(randomNum));
-
-/*
-const num = Math.random();
-let num1 = num * 10;
-console.log(num1);
-let roundNum = Math.floor(num1);
-console.log("Your random number is " + roundNum); */
+console.log(magic8ball());
