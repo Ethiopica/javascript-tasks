@@ -1,17 +1,11 @@
-### Javascript Completed Tasks
+week_1
 
-Week 1.
+- [x] data_type
+- [x] string
+- [x] numbers
 
-- **week_01**
-  [x] data_types
-  [x] operators
-  [x] variables
-- **week_02:**
-  [x] basic_functions
-  [x] numbers
-  [x] strings
-  [X] conditions
-- **week_03:**
-  [x] github
-  [ ] loops
-  [ ] 8_ball
+week_2
+
+- [x] condition
+- [x] numbers
+- [ ]
