@@ -34,10 +34,10 @@ function magic8ball() {
       return "Yes definately";
       break;
     case 2:
-      return " It is certain";
+      return "It is certain";
       break;
     case 3:
-      return " Reply hazy, try agian";
+      return "Reply hazy, try agian";
       break;
     case 4:
       return "Ask agin later";
@@ -49,10 +49,10 @@ function magic8ball() {
       return "My source say no";
       break;
     case 7:
-      return " out look not so good";
+      return "Outlook not so good";
       break;
     case 8:
-      return "Sign point to say yes";
+      return "Sign point  say yes";
       break;
   }
 }
