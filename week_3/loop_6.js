@@ -1,21 +1,27 @@
 /* 
-Write a function named countEvenNumbers:
-- Prompt the user to input 20 numbers one by one.
-- After all numbers are entered, log how many of them were even.
-Display the result in the console. 
+Write a function named askToContinue:
+- Prompt the user to enter a number.
+- Then, ask: "Do you want to continue giving numbers? (y/n)".
+- If the user answers "y", ask for another number.
+- If the user answers "n", stop asking and log the average of all entered numbers in the console. 
 */
 
-const countEvenNumbers = () => {
-  let i = 0;
-  let count = 0;
-  while (i < 20);
-  {
-    question = Number(prompt("Enter numbers"));
-    if (question % 2 === 0) {
-      count++;
+const askToContinue = () => {
+  let sum = 0;
+  let count = 1;
+  while (true) {
+    let userInput = Number(prompt("Enter a number:"));
+    sum += userInput;
+    count++;
+    let continueResponse = prompt(
+      "Do you want to continue giving numbers? (y/n)"
+    );
+    if (continueResponse === "n") {
+      let average = sum / count;
+      console.log("The average of all entered numbers is: ", average);
+      break;
     }
-    i++;
   }
-  console.log("Amount of even numbers: ", count);
 };
-countEvenNumbers();
+
+askToContinue();
