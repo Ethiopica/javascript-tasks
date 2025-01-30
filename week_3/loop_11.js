@@ -12,19 +12,6 @@ Example for 5:
 ...
 5 x 10 = 50
  */
-/*
-const generateMultiplicationTable = () => {
-  let y = 1;
-  let product = x * y;
-  let x = Number(prompt("Enter number:"));
-  for (y = 1; y <= 5; y++) {
-    const product = y * x;
-  }
-  console.log(" x" + "*" + "y" + "=" + product);
-};
-generateMultiplicationTable();
-
-*/
 const generateMultiplicationTable = () => {
   let x = Number(prompt("Enter number:"));
   for (let y = 1; y <= 5; y++) {
