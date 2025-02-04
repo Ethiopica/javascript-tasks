@@ -16,6 +16,7 @@ week_02
 
 week_03
 
-- [x] gitHub
-- [ ] loops
+- [x] GitHub
+- [x] loops
 - [x] 8ball
+- [ ] Object
