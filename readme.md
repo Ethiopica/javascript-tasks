@@ -19,4 +19,5 @@ week_03
 - [x] GitHub
 - [x] loops
 - [x] 8ball
+- [ ] DOM
 - [ ] Object

@@ -1,3 +1,6 @@
-const paragraph = document.querySelector("paragraph");
+const paragraphs = document.querySelectorAll(".paragraph");
 
-console.log(paragraph);
+paragraphs.forEach((paragraph) => {
+  paragraph.style.backgroundColor = "green";
+  console.log(paragraph);
+});
