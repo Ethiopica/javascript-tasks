@@ -1,5 +1,6 @@
+/*
 const button = document.getElementById("toggleBtn");
-const paragraph = document.getElementById("result");
+const paragraph = document.getElementById("paragraph");
 
 const toggleVisibility = () => {
   if (paragraph.style.display === "none") {
@@ -9,3 +10,15 @@ const toggleVisibility = () => {
   }
 };
 button.addEventListener("click", toggleVisibility);
+
+
+*/
+
+const paragraph = document.getElementById("paragraph");
+const toggleBtn = document.getElementById("toggleBtn");
+
+toggleBtn.addEventListener("click", () => {
+  paragraph.style.display === "none"
+    ? paragraph.style.display == "block"
+    : (paragraph.style.display = "none");
+});

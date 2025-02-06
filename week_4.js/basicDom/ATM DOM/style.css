@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(20, 35, 30);
+  color: azure;
+  font-family: "Lato", sans-serif;
+  font-family: "Sofia", sans-serif;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+section {
+  align-content: center;
+}
