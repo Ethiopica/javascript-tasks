@@ -19,5 +19,10 @@ week_03
 - [x] GitHub
 - [x] loops
 - [x] 8ball
-- [ ] DOM
+
+week_04 & 05
+
+- [x] DOM
+- [x] Pancake 1
+- [x] Pancake 2
 - [ ] Object

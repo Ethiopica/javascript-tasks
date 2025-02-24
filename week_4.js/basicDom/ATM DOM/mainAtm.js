@@ -12,6 +12,7 @@ depositBtn.addEventListener("click", () => {
   deposit(depositAmount);
   balance.innerText = currentBalance;
 });
+
 withdrawBtn.addEventListener("click", () => {
   const withdrawAmount = Number(inputWithdraw.value);
   withdraw(withdrawAmount);
