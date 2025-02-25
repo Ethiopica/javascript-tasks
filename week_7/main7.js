@@ -62,7 +62,7 @@ updateListDisplay(animalList);
 
 // Function to add a new animal to the list
 function updateAnimalList(event) {
-  let newAnimal = input.value.trim();
+  let newAnimal = input.value;
   if (newAnimal) {
     animalList.push(newAnimal); // Add new animal to the main array
     updateListDisplay(animalList); // Re-render the full list with the new animal

@@ -61,7 +61,7 @@ button:hover {
 
 #animalList li {
   background: #fff;
-  margin: 8px 0;
+  margin: 8px 0px;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
