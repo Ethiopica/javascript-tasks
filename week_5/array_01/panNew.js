@@ -1,4 +1,5 @@
 const pancakeType = document.querySelector("#type");
+
 const toppings = document.querySelectorAll(".topping");
 const extras = document.querySelectorAll(".extra");
 const totalPriceDisplay = document.querySelector("#totalPriceDisplay");
@@ -8,13 +9,11 @@ const seeOrderBtn = document.getElementById("seeOrder");
 const summaryText = document.getElementById("summaryText");
 
 const changeHandler = (event) => {
-  console.log("Event target: ", event);
   const basePrice = parseFloat(
     document.getElementById("type").selectedOptions[0].dataset.price
   );
+
   const customerName = document.getElementById("customerName").value;
-  console.log("Customer Name: ", customerName);
-  console.log("Base price: ", basePrice);
 
   const toppingTotal = [
     ...document.querySelectorAll(".topping:checked"),
@@ -45,7 +44,7 @@ pancakeForm.addEventListener("change", changeHandler);
 seeOrderBtn.addEventListener("click", () => {
   let toppings = document.querySelectorAll(".topping:checked");
   let extras = document.querySelectorAll(".extra:checked");
-  summaryText.textContent = `Order created by ${customerName.value} for ${pancakeType.value} with ${toppings.value} and ${extras.value}`;
+  summaryText.textContent = `Order created by ${customerName.value} for ${pancakeType.value} with here??? ${toppings.value} and ${extras.value}`;
 
   console.log(summaryText.textContent);
 });

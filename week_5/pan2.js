@@ -30,4 +30,4 @@ const changeHandler = (event) => {
   console.log("Event target value: ", event.target.value);
 };
 
-pancakeForm.addEventListener("change", changeHandler);
+pancakeForm.addEventListener("change", changeHandler); 

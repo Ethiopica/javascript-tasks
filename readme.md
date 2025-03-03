@@ -25,4 +25,8 @@ week_04 & 05
 - [x] DOM
 - [x] Pancake 1
 - [x] Pancake 2
-- [ ] Object
+
+Week_07
+
+- [x] Little Zoo Animal practice
+- [x] Object
