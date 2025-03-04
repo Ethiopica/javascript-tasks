@@ -44,7 +44,7 @@ pancakeForm.addEventListener("change", changeHandler);
 seeOrderBtn.addEventListener("click", () => {
   let toppings = document.querySelectorAll(".topping:checked");
   let extras = document.querySelectorAll(".extra:checked");
-  summaryText.textContent = `Order created by ${customerName.value} for ${pancakeType.value} with here??? ${toppings.value} and ${extras.value}`;
+  summaryText.textContent = `Order created by ${customerName.value} for ${pancakeType.value} ${toppings.value} and ${extras.value}`;
 
   console.log(summaryText.textContent);
 });
