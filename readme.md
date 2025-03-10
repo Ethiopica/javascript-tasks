@@ -30,3 +30,4 @@ Week_07
 
 - [x] Little Zoo Animal practice
 - [x] Object
+- [x] Pancake 3

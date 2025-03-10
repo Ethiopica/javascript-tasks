@@ -126,7 +126,26 @@ Write a function `totalCartValue(jsonString)` that:
 - Returns the total price of all items in the cart.
 */
 
-// Your code here
+function totalCartValue() {
+  const cartJASON =
+    '{"items":[{"name":"Apple","price":10},{"name":"Banana","price":15},{"name":"Orange","price":25}]}';
+}
+const cartObject = JSON.parse(cartJASON);
+const totalPrice = item.price * item.quantity;
+console.log(totalPrice);
+
+function totalCartValue() {
+  const cartJSON =
+    '{"items":[{"name":"Apple","price":10,"quantity":3},{"name":"Banana","price":15,"quantity":2},{"name":"Orange","price":25,"quantity":1}]}';
+  const cartObject = JSON.parse(cartJSON);
+  console.log(cartObject);
+  let totalPrice = 0;
+  for (let item of cartObject.items) {
+    totalPrice += item.price * item.quantity;
+  }
+  console.log(totalPrice);
+}
+totalCartValue();
 
 /* Task 10
 Create an object named `gameProgress` with:
@@ -139,4 +158,15 @@ Parse the JSON back into an object and update the `score` property by adding 100
 Log the updated object.
 */
 
-// Your code here
+const gameProgress = {
+  level: 5,
+  score: 67,
+  livesRemaing: 4,
+};
+const gameProgressJason = JSON.stringify(gameProgress);
+console.log(gameProgressJason);
+
+const gameProgressJson = '{"level":5,"score":67,"livesRemaing":4}';
+const gameProgressString = JSON.parse(gameProgressJason);
+const updateScore = (gameProgressString.score += 100);
+console.log(updateScore);

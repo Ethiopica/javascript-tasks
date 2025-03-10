@@ -290,3 +290,93 @@ const admins = getAdmins(userProfiles);
 admins.forEach((admin) => {
   console.log(admin.username);
 });
+
+/* Task 12
+Define an array named `orders`, where each order contains `orderId`, `customerName`, `totalAmount`, and `status` (either "pending" or "completed").
+Write a function that returns only the completed orders.
+*/
+
+// Your code here
+let orders = [
+  { orderId: 1, customerName: "Elias", totalAmount: 15, status: "pending" },
+  { orderId: 2, customerName: "Shiab", totalAmount: 25, status: "completed" },
+  { orderId: 3, customerName: "Margit", totalAmount: 13, status: "pending" },
+  { orderId: 4, customerName: "Sara", totalAmount: 11, status: "completed" },
+  { orderId: 5, customerName: "Hana", totalAmount: 10, status: "completed" },
+];
+function checkStatus(orders) {
+  return orders.filter((order) => order.status === "completed"); // Filter orders where the status is 'completed'
+}
+let readyItems = checkStatus(orders);
+
+readyItems.forEach((order) => {
+  console.log(order.customerName);
+}); // Print customer names for orders that are completed
+
+/* Task 13
+Create an object named `smartphone` with properties for `brand`, `model`, `batteryLife`, and `is5GEnabled`.
+Write a function that logs `"This phone supports 5G!"` if `is5GEnabled` is `true`, otherwise logs `"This phone does not support 5G."`
+*/
+
+// Your code here
+
+const smartPhone = {
+  brand: "Samsung",
+  model: "Galaxy S",
+  batteryLife: "Good",
+  is5GEnabled: false,
+};
+
+function support5G(smartPhone) {
+  if (smartPhone.is5GEnabled) {
+    return "This phone supports 5G.";
+  } else {
+    return "This phone does not support 5G.";
+  }
+}
+
+console.log(support5G(smartPhone));
+
+/* Task 14
+Define an object named `fox` with properties `name`, `age`, and `habitat`.
+Write a function that logs `"This fox is young"` if its age is under 3, `"This fox is an adult"` if 3 or older.
+*/
+
+// Your code here
+const fox = {
+  name: "Mini",
+  age: 2,
+  habitat: "mountain",
+};
+
+function checkAge(fox) {
+  if (fox.age < 3) {
+    return "This fox is young.";
+  } else {
+    return "This fox is adult.";
+  }
+}
+
+console.log(checkAge(fox));
+/* Task 15
+Define an array named `employees`, where each employee has `name`, `position`, and `salary`.
+Write a function that calculates the total salary of all employees in the company.
+*/
+
+// Your code here
+
+const employees = [
+  { name: "Elias", position: "Junior web developer", salary: 3500 },
+  { name: "Hana", position: "Junior Back end developer", salary: 2500 },
+  { name: "Beza", position: "Senior Graphic designer", salary: 4000 },
+  { name: "Sepö", position: "CEO", salary: 7000 },
+];
+
+function totalSalary(employees) {
+  // Use reduce to sum up all the salaries
+  return employees.reduce((sum, employee) => sum + employee.salary, 0);
+}
+
+let total = totalSalary(employees);
+
+console.log("Total salary of all employees:", total);
