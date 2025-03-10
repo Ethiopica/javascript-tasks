@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pancake Order Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+      input,
+      select,
+      button {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Place Your Pancake Order</h1>
+
+    <form id="orderForm">
+      <label for="customerName">Customer Name:</label>
+      <input type="text" id="customerName" required /><br />
+
+      <label for="pancakeType">Pancake Type:</label>
+      <input type="text" id="pancakeType" required /><br />
+
+      <label for="toppings">Toppings & Extras:</label>
+      <input type="text" id="toppings" /><br />
+
+      <label for="deliveryMethod">Delivery Method:</label>
+      <select id="deliveryMethod">
+        <option value="pickup">Pickup</option>
+        <option value="delivery">Delivery</option></select
+      ><br />
+
+      <label for="totalPrice">Total Price:</label>
+      <input type="number" id="totalPrice" required /><br />
+
+      <button type="submit">Submit Order</button>
+    </form>
+
+    <script src="p.js"></script>
+  </body>
+</html>

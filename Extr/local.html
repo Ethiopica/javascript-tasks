@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 1</title>
+  </head>
+  <body>
+    <h1>Page 1</h1>
+    <input type="text" id="username" placeholder="Enter username" />
+    <button onclick="saveData()">Save Data</button>
+
+    <script>
+      // Function to save data to localStorage
+      function saveData() {
+        const username = document.getElementById("username").value;
+        if (username) {
+          localStorage.setItem("username", username); // Save data to localStorage
+          alert("Data saved!");
+        } else {
+          alert("Please enter a username");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -36,15 +36,23 @@ const changeHandler = (event) => {
 };
 pancakeForm.addEventListener("change", changeHandler);
 
-/* seeOrderBtn.addEventListener("click", () => {
-  summaryText.textContent = `Order created by ${customerName.value} for ${pancakeType.value} with ${toppings.value} and ${extras.value}`;
-});
-*/
-
-seeOrderBtn.addEventListener("click", () => {
+/*seeOrderBtn.addEventListener("click", () => {
   let toppings = document.querySelectorAll(".topping:checked");
   let extras = document.querySelectorAll(".extra:checked");
-  summaryText.textContent = `Order created by ${customerName.value} for ${pancakeType.value} ${toppings.value} and ${extras.value}`;
+  summaryText.textContent = `Order created by ${customerName.value} for ${pancakeType.value} ${toppings.value} and ${extras.value}`; */
 
+seeOrderBtn.addEventListener("click", () => {
+  const selectedToppings = [
+    ...document.querySelectorAll(".topping:checked"),
+  ].map((topping) => topping.value);
+
+  const selectedExtras = [...document.querySelectorAll(".extra:checked")].map(
+    (extra) => extra.value
+  );
+  summaryText.textContent = `Order created by ${customerName.value} for ${
+    pancakeType.value
+  } pancake with toppings: ${selectedToppings.join(
+    ", "
+  )} and extras: ${selectedExtras.join(", ")}`;
   console.log(summaryText.textContent);
 });

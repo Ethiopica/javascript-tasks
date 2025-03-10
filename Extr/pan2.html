@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Orders</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        margin: 20px;
+      }
+      .order-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+      }
+      .order-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        width: 250px;
+        padding: 15px;
+        text-align: center;
+      }
+      .order-card h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      .status {
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .status.pending {
+        background-color: #f7c12d;
+        color: #fff;
+      }
+      .status.ready {
+        background-color: #4caf50;
+        color: #fff;
+      }
+      .status.delivered {
+        background-color: #3f88cc;
+        color: #fff;
+      }
+      .order-actions {
+        margin-top: 15px;
+      }
+      .btn {
+        padding: 10px;
+        font-size: 14px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+      }
+      .btn.cancel {
+        background-color: #f44336;
+      }
+      .btn:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>All Orders</h1>
+
+    <div class="order-container" id="orderContainer">
+      <!-- Individual order cards will appear here -->
+    </div>
+
+    <script>
+      // Sample orders data (you can replace it with dynamic data)
+      const orders = [
+        {
+          id: 1,
+          customerName: "John Doe",
+          pancakeType: "Classic Pancake",
+          toppings: ["Syrup ($1.00)", "Whipped Cream ($1.50)"],
+          extras: ["Bacon ($2.50)"],
+          status: "pending",
+        },
+        {
+          id: 2,
+          customerName: "Jane Smith",
+          pancakeType: "Chocolate Pancake",
+          toppings: ["Fresh Berries ($2.00)"],
+          extras: ["Egg ($2.00)", "Ice Cream ($3.00)"],
+          status: "ready",
+        },
+        {
+          id: 3,
+          customerName: "Emma Johnson",
+          pancakeType: "Blueberry Pancake",
+          toppings: ["Whipped Cream ($1.50)", "Syrup ($1.00)"],
+          extras: ["Bacon ($2.50)"],
+          status: "delivered",
+        },
+      ];
+
+      // Function to render orders
+      function renderOrders() {
+        const orderContainer = document.getElementById("orderContainer");
+        orderContainer.innerHTML = ""; // Clear current orders
+
+        orders.forEach((order) => {
+          // Create order card
+          const orderCard = document.createElement("div");
+          orderCard.className = "order-card";
+          orderCard.setAttribute("data-id", order.id);
+
+          // Card content
+          orderCard.innerHTML = `
+                <h3>Order #${order.id}</h3>
+                <p><strong>Customer:</strong> ${order.customerName}</p>
+                <p><strong>Pancake:</strong> ${order.pancakeType}</p>
+                <p><strong>Toppings:</strong> ${
+                  order.toppings.join(", ") || "None"
+                }</p>
+                <p><strong>Extras:</strong> ${
+                  order.extras.join(", ") || "None"
+                }</p>
+                <div class="status ${order.status}">${
+            order.status.charAt(0).toUpperCase() + order.status.slice(1)
+          }</div>
+                <div class="order-actions">
+                    <button class="btn" onclick="changeStatus(${
+                      order.id
+                    })">Change Status</button>
+                    <button class="btn cancel" onclick="cancelOrder(${
+                      order.id
+                    })">Cancel Order</button>
+                </div>
+            `;
+
+          // Append the card to the container
+          orderContainer.appendChild(orderCard);
+        });
+      }
+
+      // Function to change order status
+      function changeStatus(orderId) {
+        const order = orders.find((o) => o.id === orderId);
+
+        // Cycle through statuses
+        if (order.status === "pending") {
+          order.status = "ready";
+        } else if (order.status === "ready") {
+          order.status = "delivered";
+        } else {
+          order.status = "pending";
+        }
+
+        renderOrders(); // Re-render orders after status change
+      }
+
+      // Function to cancel order
+      function cancelOrder(orderId) {
+        const orderIndex = orders.findIndex((o) => o.id === orderId);
+        if (orderIndex > -1) {
+          orders.splice(orderIndex, 1); // Remove order from the list
+        }
+        renderOrders(); // Re-render orders after cancellation
+      }
+
+      // Initial render
+      renderOrders();
+    </script>
+  </body>
+</html>
