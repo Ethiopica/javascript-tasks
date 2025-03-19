@@ -44,7 +44,6 @@ div.form-container {
   padding: 50px;
   min-height: 100vh;
   overflow-y: scroll;
-  flex-wrap: wrap;
 }
 .price-banner {
   position: absolute;
@@ -75,11 +74,6 @@ label {
   margin-top: 10px;
 }
 
-select,
-label {
-  display: block;
-  margin-top: 10px;
-}
 fieldset {
   margin-top: 20px;
   box-shadow: #000000;
@@ -90,20 +84,6 @@ legend {
   background-color: rgb(10, 60, 25);
   color: white;
   padding: 5px 10px;
-}
-
-form#pancakeForm img {
-  display: block;
-  width: 20%;
-
-  float: right;
-  padding: 10px;
-  margin-top: 500px;
-}
-
-.text {
-  position: relative;
-  z-index: 1;
 }
 
 @media (min-width: 768px) {

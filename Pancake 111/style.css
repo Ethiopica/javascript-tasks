@@ -12,6 +12,8 @@ body {
   margin: 0;
   min-height: 100vh;
   overflow: hidden;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
 }
 
 .container {
@@ -33,17 +35,13 @@ body {
   height: 100vh;
 }
 
-div.form-container {
-  overflow: visible;
-  background-color: white;
-  position: relative;
-}
 .form-container {
   flex: 1;
   padding: 50px;
   min-height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
+
 .price-banner {
   position: absolute;
   top: 20px;
@@ -72,46 +70,14 @@ label {
   display: block;
   margin-top: 10px;
 }
-.ordersummary {
-  text-align: justify;
+fieldset {
+  margin-top: 20px;
+  box-shadow: #000000;
+  max-width: 500px;
+  padding: 16px;
 }
-
-/* Order Summary Card */
-#orderSummary {
-  width: 350px;
-  background-color: #0e390f;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: inherit;
-}
-#orderSummary h3 {
-  font-size: 22px;
-  color: #f2f9fa;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-/* Text for the summary */
-#summaryText {
-  font-size: 16px;
-  color: #ede6e6;
-  line-height: 1.5;
-  text-align: center;
-  margin-top: 0;
-}
-
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+legend {
+  background-color: rgb(10, 60, 25);
+  color: white;
+  padding: 5px 10px;
 }

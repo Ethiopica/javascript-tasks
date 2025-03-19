@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Pancake Maker</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -34,20 +38,18 @@
         <h3>Add extras:</h3>
         <label><input type="checkbox" class="extra" data-price="2" /> Whipped Cream - 2€</label>
         <label><input type="checkbox" class="extra" data-price="3" /> Ice Cream - 3€</label>
-      <h3> Coose Your Deelivery Method</h3>
-      <label><input type="radio" name="delivery" data-price="0" checked /> Eat In</label>
-      <label><input type="radio" name="delivery" data-price="5" checked /> Delevery to Home - 5€</label> 
-      <label><input type="radio" name="delivery" data-price="4" checked /> Delevery to Office - 4€</label> 
 
-      <h3>Total Price: <span id="totalPriceDisplay">5€</span></h3>
-      <button type="button" id="seeOrder">See Order</button>
-    </form>
+        <h3>Total Price: <span id="totalPriceDisplay">5€</span></h3>
+        <button type="button" id="seeOrder">See Order</button>
+      </form>
+
       <!-- Order Summary Display -->
       <div id="orderSummary">
-        <h3>Order Summary</h3>
+        <fieldset> <legend> Order Summary</legend>  
         <p id="summaryText">Your order details will appear here.</p>
       </div>
     </div>
+ </fieldset>
     <script src="script.js"></script>
   </body>
 </html>
