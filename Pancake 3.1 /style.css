@@ -1,0 +1,193 @@
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container Styling */
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Fields */
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+/* Fancy Focus Effect */
+input:focus,
+select:focus {
+  border: 2px solid #ff758c;
+  box-shadow: 0 0 10px rgba(255, 117, 140, 0.5);
+}
+
+/* Fancy Buttons */
+button {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover effect */
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
+}
+
+/* Fancy Fieldset */
+fieldset {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Legend Styling */
+legend {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Custom Checkboxes & Radios */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #ff758c;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Price Banner */
+.price-banner {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+/* Orders Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+}
+
+.modal-content {
+  text-align: left;
+}
+
+.close-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal {
+  animation: fadeIn 0.3s ease-in-out;
+}
+/* General Image Styling */
+img {
+  width: 100%;
+  height: 50%;
+  max-width: 250px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect: Slight Zoom */
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Special Style for Form Image */
+.form-container img {
+  max-width: 180px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  backdrop-filter: blur(10px);
+}
+
+/* Special Style for Price Banner Image */
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.image-container img {
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Price Banner Position */
+.price-banner {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+  color: #333;
+}
