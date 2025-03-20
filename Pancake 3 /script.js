@@ -69,8 +69,10 @@ seeOrderBtn.addEventListener("click", () => {
   orders.push(order);
   localStorage.setItem("orders", JSON.stringify(orders));
 
-  document.getElementById("orderForm").reset();
+  console.log("Order submitted successfully!");
   alert(
     "Order submitted successfully! Go to the 'All Orders' page to view your order."
   );
+
+  document.getElementById("orderForm").reset();
 });
