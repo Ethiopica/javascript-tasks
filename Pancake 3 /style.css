@@ -1,13 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* General Styling */
 body {
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  background: linear-gradient(135deg, #327444, #a6e0a5);
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 /* Container Styling */
@@ -18,7 +19,7 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 90%;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 /* Form Styling */
@@ -43,13 +44,13 @@ select {
 /* Fancy Focus Effect */
 input:focus,
 select:focus {
-  border: 2px solid #ff758c;
+  border: 2px solid #327444;
   box-shadow: 0 0 10px rgba(255, 117, 140, 0.5);
 }
 
 /* Fancy Buttons */
 button {
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  background: linear-gradient(135deg, #327444, #a6e0a5);
   color: white;
   border: none;
   padding: 12px;
@@ -84,7 +85,7 @@ legend {
 /* Custom Checkboxes & Radios */
 input[type="checkbox"],
 input[type="radio"] {
-  accent-color: #ff758c;
+  accent-color: #a6e0a5;
   transform: scale(1.2);
   cursor: pointer;
 }
@@ -144,7 +145,7 @@ input[type="radio"] {
 /* General Image Styling */
 img {
   width: 100%;
-  height: 50%;
+  width: fit-content;
   max-width: 250px;
   border-radius: 15px;
   display: block;
@@ -160,7 +161,7 @@ img:hover {
 
 /* Special Style for Form Image */
 .form-container img {
-  max-width: 180px;
+  max-width: 100px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.3);
   padding: 10px;
