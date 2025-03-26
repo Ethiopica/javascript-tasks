@@ -229,6 +229,4 @@ function getTopStudents(studentList) {
     }
   });
 }
-
-// Debug & Test
-console.log(getTopStudents(students)); // Expected: ["Alice", "Charlie"]
+console.log(getTopStudents(students));

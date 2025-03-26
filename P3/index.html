@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pancake Maker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img src="p.jpg" alt="Delicious pancakes" />
+        <div class="price-banner">
+          Total: <span id="totalPriceBanner">5€</span>
+        </div>
+      </div>
+
+      <div class="form-container">
+        <form id="pancakeForm">
+          <h2>Customize Your Pancake</h2>
+          <label for="customerName">Your Name:</label>
+          <input
+            type="text"
+            id="customerName"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label for="type">Choose your pancake type:</label>
+          <select id="type">
+            <option data-price="5">Classic - 5€</option>
+            <option data-price="6">Chocolate - 6€</option>
+            <option data-price="7">Blueberry - 7€</option>
+          </select>
+
+          <h3>Select your toppings (1€ each):</h3>
+          <label
+            ><input type="checkbox" class="topping" data-price="1" />
+            Nuts</label
+          >
+          <label
+            ><input type="checkbox" class="topping" data-price="1" />
+            Bananas</label
+          >
+          <label
+            ><input type="checkbox" class="topping" data-price="1" />
+            Syrup</label
+          >
+
+          <h3>Add extras:</h3>
+          <label
+            ><input type="checkbox" class="extra" data-price="2" /> Whipped
+            Cream - 2€</label
+          >
+          <label
+            ><input type="checkbox" class="extra" data-price="3" /> Ice Cream -
+            3€</label
+          >
+
+          <h3>Delivery Method</h3>
+          <label
+            ><input type="radio" name="delivery" data-price="0" checked /> Eat
+            In</label
+          >
+          <label
+            ><input type="radio" name="delivery" data-price="5" /> Delivery to
+            Home - 5€</label
+          >
+          <label
+            ><input type="radio" name="delivery" data-price="4" /> Delivery to
+            Office - 4€</label
+          >
+
+          <h3>Total Price: <span id="totalPriceDisplay">5€</span></h3>
+          <button type="button" id="seeOrder">Place Order</button>
+        </form>
+
+        <!-- Button to see all orders -->
+        <button id="seeOrdersBtn">See All Orders</button>
+
+        <!-- Orders Modal -->
+        <div id="ordersModal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeOrders()">×</span>
+            <h2>All Orders</h2>
+            <ul id="ordersList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -12,7 +12,6 @@ body {
   margin: 0;
   min-height: 100vh;
   font-size: 18px;
-  background: linear-gradient(135deg, #2c6e49, #7deaac);
 }
 
 .container {
@@ -90,11 +89,9 @@ label {
 
 fieldset {
   margin-top: 20px;
-  box-shadow: #e80505;
+  box-shadow: #000000;
   max-width: 500px;
   padding: 16px;
-  background-color: darkgrey;
-  background-image: -moz-element();
 }
 legend {
   background-color: rgb(10, 60, 25);
@@ -109,29 +106,12 @@ button#seeOrder {
   cursor: pointer;
 }
 
-button {
-  background: linear-gradient(135deg, #1a5b27, #6cdb75);
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
-}
 div#orderSummary a button {
-  margin-left: 200px;
+  margin-left: 100px;
   padding: 10px;
   background-color: #0e390f;
   color: #ffffff;
-  cursor: pointer;
-  border-radius: 5px;
 }
-
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
@@ -144,17 +124,60 @@ div#orderSummary a button {
     justify-content: space-between;
   }
 }
-fieldset {
-  border: 2px solid rgba(5, 33, 13, 0.4);
-  border-radius: 10px;
-  padding: 20px;
-  background: rgba(41, 132, 76, 0.2);
-  backdrop-filter: blur(10px);
+
+/* Styling for the See All Orders Dropdown */
+.orders-dropdown {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
 }
 
-/* Legend Styling */
-legend {
-  font-size: 20px;
-  font-weight: bold;
-  color: #fbf6f6;
+#seeOrdersBtn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#seeOrdersBtn:hover {
+  background-color: #0056b3;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px; /* Adjust spacing from button */
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 300px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown-content h3 {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.dropdown-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content li:last-child {
+  border-bottom: none;
 }

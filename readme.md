@@ -31,3 +31,16 @@ Week_07
 - [x] Little Zoo Animal practice
 - [x] Object
 - [x] Pancake 3
+
+Week_08
+
+- [x] Error handling
+- [x] Fault finding
+- [x] JS writing practices
+
+Week_09
+
+- [x] Async
+- [x] Chaining
+- [x] Destructuring
+- [x] Spread & rest

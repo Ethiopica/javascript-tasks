@@ -35,7 +35,6 @@ class User {
   }
 }
 
-// Instantiate a new user
 const newUser = new User("elias_bekele", "eliobais@gmail.com");
 
 newUser.showInfo();
@@ -50,14 +49,26 @@ In the constructor, add a method `age()` that calculates the car’s age.
 Instantiate a new `Car` and display its age on the webpage.
 */
 
-// Your code here
+function Car(brand, model, year) {
+  this.brand = brand;
+  this.model = model;
+  this.year = year;
+
+  this.age = function () {
+    const currentYear = new Date().getFullYear();
+    return currentYear - this.year;
+  };
+}
+
+const myCar = new Car("Toyota", "Corolla", 2015);
+document.body.innerHTML = `<h2>My ${myCar.brand} ${
+  myCar.model
+} is ${myCar.age()} years old.</h2>`;
 
 /* Task 9
 Create an array `users` where each user has `name` and `score`.
 Add a button in HTML that sorts the users by score in descending order and updates the displayed list.
 */
-
-// Your code here
 
 /* Task 10
 Create an object `shoppingList` with an array `items`.

@@ -50,7 +50,7 @@ console.log(sumNumbers(2, 3, 4)); // Expected: 9
 Extract `title` and collect the remaining properties into `extraInfo`.  
 */
 
-const book = { title: "JavaScript Guide", pages: 400, author: "John Doe" };
+const book = { title: "JavaScript Guide", pages: 400, author: "Elias B. " };
 
 // Fix this
 const { title } = book;
@@ -61,4 +61,9 @@ Write a function that receives multiple numbers and returns their average using 
 Test with: `average(10, 20, 30, 40)`. Expected output: `25`.
 */
 
-// Write your code here
+function average(...numbers) {
+  const sum = numbers.reduce((acc, num) => acc + num, 0);
+  return sum / numbers.length;
+}
+// Test case
+console.log(average(10, 20, 30, 40));

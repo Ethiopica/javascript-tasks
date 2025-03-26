@@ -71,3 +71,5 @@ function cancelOrder(orderId) {
     orderDiv.remove();
   }
 }
+
+localStorage.clear();

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fox Tracker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #foxList {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fox Tracker</h1>
+
+    <div>
+      <label for="foxName">Fox Name:</label>
+      <input type="text" id="foxName" placeholder="Enter Fox Name" />
+    </div>
+
+    <div>
+      <label for="foxLocation">Fox Location:</label>
+      <input type="text" id="foxLocation" placeholder="Enter Fox Location" />
+    </div>
+
+    <button onclick="addFox()">Add Fox</button>
+
+    <div id="foxList"></div>
+
+    <script>
+      // Creating the foxTracker object with a foxes array
+      const foxTracker = {
+        foxes: [],
+      };
+
+      // Function to add a new fox to the array
+      function addFox() {
+        const foxName = document.getElementById("foxName").value;
+        const foxLocation = document.getElementById("foxLocation").value;
+
+        if (foxName && foxLocation) {
+          // Create a new fox object and add it to the foxes array
+          const newFox = { name: foxName, location: foxLocation };
+          foxTracker.foxes.push(newFox);
+
+          // Clear the input fields
+          document.getElementById("foxName").value = "";
+          document.getElementById("foxLocation").value = "";
+
+          // Display the updated list of foxes
+          displayFoxes();
+        } else {
+          alert("Please provide both the fox name and location.");
+        }
+      }
+
+      // Function to display the foxes dynamically
+      function displayFoxes() {
+        const foxListDiv = document.getElementById("foxList");
+        foxListDiv.innerHTML = ""; // Clear the list before updating
+
+        if (foxTracker.foxes.length === 0) {
+          foxListDiv.innerHTML = "<p>No foxes added yet.</p>";
+          return;
+        }
+
+        // Create a list of foxes
+        const ul = document.createElement("ul");
+        foxTracker.foxes.forEach((fox) => {
+          const li = document.createElement("li");
+          li.textContent = `Fox Name: ${fox.name}, Location: ${fox.location}`;
+          ul.appendChild(li);
+        });
+
+        foxListDiv.appendChild(ul);
+      }
+    </script>
+  </body>
+</html>

@@ -66,5 +66,8 @@ introduce({ name: "Emma", age: 28 }); // Expected: "Emma is 28 years old."
 Write a function that receives a `car` object and logs the `brand` and `year`.
 Test with `{ brand: "Toyota", year: 2020 }`.
 */
-
-// Write your code here
+function logCarDetails(car) {
+  console.log(`Brand: ${car.brand}`);
+  console.log(`Year: ${car.year}`);
+}
+logCarDetails({ brand: "Toyota", year: 2020 });
