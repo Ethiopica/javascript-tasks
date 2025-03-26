@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+.shopping-list {
+  list-style-type: none;
+  padding: 0;
+}
+.shopping-list li {
+  margin: 10px 0;
+}
+input,
+button {
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 20px;
+}

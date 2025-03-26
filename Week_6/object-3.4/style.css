@@ -1,0 +1,14 @@
+.counter-container {
+  text-align: center;
+  margin-top: 50px;
+}
+#value {
+  font-size: 2rem;
+  margin: 20px;
+}
+button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}

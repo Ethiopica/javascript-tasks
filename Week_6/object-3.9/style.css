@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+.user-list {
+  list-style-type: none;
+  padding: 0;
+}
+.user-list li {
+  margin: 10px 0;
+}
+button {
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 20px;
+}

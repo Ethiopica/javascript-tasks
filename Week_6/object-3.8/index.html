@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Age</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .car-info {
+        font-size: 1.2rem;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Car Information</h1>
+    <div id="carInfo"></div>
+
+    <script>
+      // Constructor function for the Car
+      function Car(brand, model, year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+
+        // Method to calculate the age of the car
+        this.age = function () {
+          const currentYear = new Date().getFullYear(); // Get the current year
+          return currentYear - this.year; // Calculate the car's age
+        };
+      }
+
+      // Instantiate a new Car object
+      const myCar = new Car("Toyota", "Camry", 2015);
+
+      // Display the car's age on the webpage
+      const carInfoDiv = document.getElementById("carInfo");
+      carInfoDiv.innerHTML = `
+      <p>Car Brand: ${myCar.brand}</p>
+      <p>Car Model: ${myCar.model}</p>
+      <p>Car Year: ${myCar.year}</p>
+      <p>Car Age: ${myCar.age()} years old</p>
+    `;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts with Likes</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .post {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      .post h2 {
+        margin-top: 0;
+      }
+      button {
+        padding: 10px;
+        font-size: 1rem;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Posts</h1>
+    <div id="postsContainer"></div>
+
+    <script>
+      const posts = [
+        {
+          title: "First Post",
+          content: "This is the content of the first post.",
+          likes: 5,
+        },
+        {
+          title: "Second Post",
+          content: "This is the content of the second post.",
+          likes: 10,
+        },
+        {
+          title: "Third Post",
+          content: "This is the content of the third post.",
+          likes: 2,
+        },
+      ];
+
+      function renderPosts() {
+        const postsContainer = document.getElementById("postsContainer");
+        postsContainer.innerHTML = "";
+
+        posts.forEach((post, index) => {
+          const postDiv = document.createElement("div");
+          postDiv.classList.add("post");
+
+          const postTitle = document.createElement("h2");
+          postTitle.textContent = post.title;
+
+          const postContent = document.createElement("p");
+          postContent.textContent = post.content;
+
+          const postLikes = document.createElement("p");
+          postLikes.textContent = `Likes: ${post.likes}`;
+
+          const likeButton = document.createElement("button");
+          likeButton.textContent = "Like";
+
+          likeButton.addEventListener("click", () => {
+            post.likes++;
+            postLikes.textContent = `Likes: ${post.likes}`;
+          });
+
+          postDiv.appendChild(postTitle);
+          postDiv.appendChild(postContent);
+          postDiv.appendChild(postLikes);
+          postDiv.appendChild(likeButton);
+          postsContainer.appendChild(postDiv);
+        });
+      }
+      renderPosts();
+    </script>
+  </body>
+</html>

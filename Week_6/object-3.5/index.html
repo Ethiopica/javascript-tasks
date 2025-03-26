@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Purchase</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Product: <span id="productName">Laptop</span></h2>
+      <p>Price: $<span id="productPrice">800</span></p>
+      <p>Available Quantity: <span id="productQuantity">50</span></p>
+
+      <input type="number" id="purchaseQuantity" value="1" min="1" max="50" />
+      <button id="updateBtn">Update Quantity</button>
+
+      <div id="totalPrice">Total Price: $800</div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
